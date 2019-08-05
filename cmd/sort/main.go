@@ -3,11 +3,13 @@ package main
 import (
 	"fmt"
 	"sort"
+	"strings"
 )
 
 func sortNumb(theNums ...float64) []float64 {
 	sort.Float64s(theNums)
-	return theNums
+	result := strings.Join(theNums, ",")
+	return result
 }
 
 func main() {
